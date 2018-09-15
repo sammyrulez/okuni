@@ -1,6 +1,18 @@
 import {describe} from 'mocha';
+import {Scene} from '../lib/scene';
+import { ActorRef, Actor } from '../lib/actor';
 
-describe('InMemoryActor (TypeScript)', function() {
-   console.log('OK ss');
+class TestActor implements Actor<string> {
+    tell: (message: string) => Promise<void> = async (m: String) => {
+          console.log('message ' + m);
+           
+    }
+
+}
+
+describe('A scene could create and Actor', function() {
+
+    const ref: ActorRef<String> = new Scene().pullActor(TestActor, null);
+    ref.tell('Ciao');
     });
   
