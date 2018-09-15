@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noImplicitAny": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": false,
+      "strictNullChecks": true,
+      "sourceMap": true,
+      "inlineSources": true,
+      "newLine": "lf",
+      "outDir": "dist",
+      "types": ["node", "mocha"],
+      "typeRoots": ["./node_modules/@types"]
+    },
+    "exclude": [
+      "node_modules",
+      "target",
+      "coverage"
+    ]
+  }

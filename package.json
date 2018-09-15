@@ -1,0 +1,32 @@
+{
+  "name": "pantomime",
+  "version": "1.0.0",
+  "description": "typescript actor model",
+  "main": "index.ts",
+  "scripts": {
+    "test": "mocha -R spec --recursive --timeout 20000 --require ts-node/register --compilers ts:typescript",
+    "coverage": "nyc --reporter=lcov npm test"
+  },
+  "keywords": [
+    "typescript",
+    "actors",
+    "fp"
+  ],
+  "author": "Sam Reghenzi",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "4.1.4",
+    "@types/mocha": "5.2.2",
+    "@types/node": "10.3.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "mocha": "^3.1.0",
+    "typescript": "^3.0.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-like": "^0.1.10",
+    "nyc": "^11.0.3",
+    "istanbul": "^0.4.5"
+  }
+}
