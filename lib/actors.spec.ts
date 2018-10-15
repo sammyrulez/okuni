@@ -1,6 +1,5 @@
-import { describe , it} from 'mocha';
-import { Scene } from '../lib/scene';
-import { ActorRef, Actor } from '../lib/actor';
+import { Scene } from './scene';
+import { ActorRef, Actor } from './actor';
 
 class TestActor implements Actor<string> {
     tell: (message: string) => Promise<void> = async (m: String) => {
@@ -23,12 +22,12 @@ class StateActor implements Actor<string> {
 const scene = new Scene();
 
 describe('An Actor', function () {
-    it('should be initialized by a scene', async function () {
+    test('should be initialized by a scene', async function () {
        
         const testRef: ActorRef<string> = scene.pullActor(TestActor, null);
         testRef.tell('Ciao');
     });
-    it('should keep its state', async function() {
+    test('should keep its state', async function() {
         const stateRef: ActorRef<string> = scene.pullActor(StateActor, null);
         stateRef.tell('Bob');
         stateRef.tell('Alice');

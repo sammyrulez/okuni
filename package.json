@@ -6,9 +6,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist | rm -rf coverage | rm -rf .nyc_output  ",
-    "test": "mocha -R spec --recursive --timeout 20000 --require ts-node/register --compilers ts:typescript",
-    "coverage": "nyc --reporter=html npm test",
-    "report-coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test" :"jest"
   },
   "keywords": [
     "typescript",
@@ -19,20 +17,16 @@
   "license": "MIT",
   "repository": "git@github.com/okuni.git",
   "dependencies": {
-    "@types/chai": "4.1.4",
-    "@types/mocha": "5.2.2",
     "@types/node": "10.3.3",
-    "mocha": "^5.2.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.0.3",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-like": "^0.1.10",
-    "nyc": "^11.0.3",
-    "istanbul": "^0.4.5",
-    "coveralls": "^3.0.2"
+    "@types/jest": "^23.3.5",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4"
   }
 }
