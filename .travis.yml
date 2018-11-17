@@ -1,5 +1,11 @@
 
-language: nodejs
+language: node_js
+node_js:
+  - "node"
+  - "10.8.0"
+
+before_install:
+  - npm i -g npm@6.2.0
 
 before_script:
   - npm run clean
