@@ -2,8 +2,7 @@
 language: nodejs
 
 before_script:
-  - npm run setup
-  - npm run build
+  - npm run clean
 
 script:
   - npm run test
