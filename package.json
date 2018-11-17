@@ -7,7 +7,7 @@
     "setup": "npm install",
     "build": "tsc",
     "clean": "rm -rf dist | rm -rf coverage | rm -rf .nyc_output  ",
-    "test" :"jest",
+    "test": "jest",
     "report-coverage": "coveralls"
   },
   "keywords": [
@@ -19,10 +19,10 @@
   "license": "MIT",
   "repository": "git@github.com/okuni.git",
   "dependencies": {
-    "@types/node": "10.3.3",
+    "@types/node": "^10.3.3",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.3",
+    "typescript": "^3.1.6",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
