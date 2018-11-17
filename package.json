@@ -4,6 +4,7 @@
   "description": "typescript actor model",
   "main": "index.ts",
   "scripts": {
+    "setup": "npm install",
     "build": "tsc",
     "clean": "rm -rf dist | rm -rf coverage | rm -rf .nyc_output  ",
     "test" :"jest",
